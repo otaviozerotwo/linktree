@@ -29,7 +29,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 960px;
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
@@ -48,6 +48,9 @@ header {
 
   .profile-avatar {
     display: block;
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
     margin: 0 auto 24px;
     border-radius: 50%;
     .transition();
@@ -102,6 +105,7 @@ header {
       text-decoration: none;
       background-color: #colors[buttonColor];
       color: #colors[buttonTextColor];
+      font-size: 14px;
       font-weight: 500;
       border: 2px solid #colors[buttonColor];
       border-radius: 30px;
