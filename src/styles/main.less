@@ -1,0 +1,116 @@
+@import 'config/reset.less';
+@import 'maps/maps.less';
+
+@breakpointMobile: ~'(max-width: 767px)';
+@breakpointTablet: ~'(min-width: 768px) and (max-width: 1023px)';
+
+.marginBottom8 {
+  margin-bottom: 8px;
+}
+
+.transform {
+  transform: scale(1.1);
+}
+
+.transition {
+  transition: all ease 0.3s;
+}
+
+body {
+  background-color: #colors[backgroundColor];
+  color: #colors[textColor];
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+
+  @media @breakpointMobile {
+    max-width: 70%;
+  }
+  
+  @media @breakpointTablet {
+    max-width: 80%;
+  }
+}
+
+header {
+  padding-bottom: 24px;
+
+  .profile-avatar {
+    display: block;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    .transition();
+
+    &:hover {
+      .transform();
+    }
+  }
+}
+
+.profile-bio {
+  text-align: center;
+
+  &-title {
+    font-size: 18px;
+    .marginBottom8();
+  }
+  
+  &-subtitle {
+    font-size: 16px;
+    .marginBottom8();
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+
+  li {
+    img {
+      .transition();
+
+      &:hover {
+        .transform();
+      }
+    }
+  }
+}
+
+.projects-list {
+  margin-top: 32px;
+
+  &-item {
+    a {
+      display: block;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #colors[buttonColor];
+      color: #colors[buttonTextColor];
+      font-weight: 500;
+      border: 2px solid #colors[buttonColor];
+      border-radius: 30px;
+      .transition();
+
+      &:hover {
+        color: #colors[buttonColor];
+        background-color: transparent;
+      }
+    }
+  }
+}
